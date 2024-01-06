@@ -1,4 +1,4 @@
-# Ders Programı Projesi
+# Çizge Renklendirme Kullanarak Ders Programı Oluşturma Projesi
 
 Bu proje, ders programı oluşturmayı ve çakışmaları kontrol etmeyi amaçlayan bir C# Windows Form uygulamasıdır.
 
