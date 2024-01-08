@@ -19,7 +19,7 @@ Proje, kullanıcıların ders programını oluşturmasına ve çakışmaları ko
 
 ## Ekran Görüntüleri
 
-![1](https://github.com/AndacAkyuz/Cizge-Renklendirme-Ders-Programi-Projesi/assets/91327557/9e676e96-1a5b-4e39-b72e-6c524bd01643)
+![1](https://github.com/AndacAkyuz/Cizge-Renklendirme-Ders-Programi-Projesi/assets/91327557/475eb7f6-df66-4ec2-82dd-910c3e04d00d)
 
 ![2](https://github.com/AndacAkyuz/Cizge-Renklendirme-Ders-Programi-Projesi/assets/91327557/614633b2-7fee-441c-b5d3-c3eee7d06025)
 
