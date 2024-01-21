@@ -4,10 +4,18 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using Excel = Microsoft.Office.Interop.Excel;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+
+
 
 namespace ders_programi
 {
@@ -387,9 +395,221 @@ namespace ders_programi
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //int satir = comboBox4.SelectedIndex;
-            //MessageBox.Show("satir: " + satir);
+            
            
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            string selectedStage = comboBox9.Text;
+            string query = "SELECT aktif_ders.*, ders.*, ogretmen.*, sinif.*FROM aktif_ders INNER JOIN ders ON aktif_ders.ders_id = ders.ders_id INNER JOIN ogretmen ON aktif_ders.ogr_id = ogretmen.ogr_id INNER JOIN sinif ON aktif_ders.sinif_id = sinif.sinif_id WHERE seviye= @stage";
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    DataTable dt = new DataTable();
+                    SqlDataReader reader = null;
+
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Parametreleri ekleme
+                        command.Parameters.AddWithValue("@stage", selectedStage);
+                        
+
+                        //// Ders Ekleme
+                        reader = command.ExecuteReader();
+                        dt.Load(reader);
+                        dataGridView1.DataSource= dt;
+
+
+                        //if (dt.Rows.Count == 0)
+                        //{
+                        //    MessageBox.Show("Ders programı hazır!");
+                        //    button1.BackColor = Color.Orange;
+                        //    button1.Enabled = false;
+                        //}
+                        //else
+                        //{
+                        //    MessageBox.Show("hata!");
+                        //}
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: 352" + ex.Message);
+            }
+
+
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            string selectedClass = comboBox10.Text;
+            string query = "SELECT aktif_ders.*, ders.*, ogretmen.* FROM aktif_ders INNER JOIN ders ON aktif_ders.ders_id = ders.ders_id INNER JOIN ogretmen ON aktif_ders.ogr_id = ogretmen.ogr_id  WHERE sinif_id = @class";
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    DataTable dt = new DataTable();
+                    SqlDataReader reader = null;
+
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Parametreleri ekleme
+                        command.Parameters.AddWithValue("@class", selectedClass);
+
+
+                        //// Ders Ekleme
+                        reader = command.ExecuteReader();
+                        dt.Load(reader);
+                        dataGridView1.DataSource = dt;
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: 352" + ex.Message);
+            }
+
+
+
+        }
+        private void ExportToExcel(DataGridView dataGridView)
+        {
+            if (dataGridView.Rows.Count == 0)
+            {
+                MessageBox.Show("Aktarılacak veri bulunamadı.");
+                return;
+            }
+
+            try
+            {
+                Excel.Application excelApp = new Excel.Application();
+                excelApp.Application.Workbooks.Add(Type.Missing);
+                Excel.Worksheet excelWorksheet = (Excel.Worksheet)excelApp.ActiveSheet;
+
+                for (int i = 1; i < dataGridView.Columns.Count + 1; i++)
+                {
+                    excelWorksheet.Cells[1, i] = dataGridView.Columns[i - 1].HeaderText;
+                }
+
+                for (int i = 0; i < dataGridView.Rows.Count; i++)
+                {
+                    for (int j = 0; j < dataGridView.Columns.Count; j++)
+                    {
+                        object cellValue = dataGridView.Rows[i].Cells[j].Value;
+                        excelWorksheet.Cells[i + 2, j + 1] = cellValue != null ? cellValue.ToString() : string.Empty;
+
+                    }
+                }
+
+                excelApp.Columns.AutoFit();
+                excelApp.Visible = true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Excel'e aktarım sırasında bir hata oluştu: " + ex.Message);
+            }
+        }
+
+        private void ExportToPdf(DataGridView dataGridView1, string fileName)
+        {
+            try
+            {
+                // PDF belgesini oluştur
+                PdfWriter writer = new PdfWriter(fileName);
+                PdfDocument pdf = new PdfDocument(writer);
+                Document document = new Document(pdf);
+
+            
+                // DataGridView içeriğini PDF'e ekle
+                Table table = new Table(dataGridView1.ColumnCount);
+                for (int i = 0; i < dataGridView1.ColumnCount; i++)
+                {
+                    table.AddCell(new Cell().Add(new Paragraph(dataGridView1.Columns[i].HeaderText)));
+                }
+
+                for (int i = 0; i < dataGridView1.RowCount; i++)
+                {
+                    for (int j = 0; j < dataGridView1.ColumnCount; j++)
+                    {
+                        table.AddCell(new Cell().Add(new Paragraph(dataGridView1[j, i].Value.ToString())));
+                    }
+                }
+
+                document.Add(table);
+
+                // PDF dosyasını kapat
+                document.Close();
+
+                MessageBox.Show("PDF dosyası başarıyla oluşturuldu.", "Başarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: " + ex.Message, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        
+    }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+            string selectedDay = comboBox11.Text;
+            string query = "SELECT aktif_ders.*, ders.*, ogretmen.* FROM aktif_ders INNER JOIN ders ON aktif_ders.ders_id = ders.ders_id INNER JOIN ogretmen ON aktif_ders.ogr_id = ogretmen.ogr_id  WHERE gün = @day";
+
+
+            try
+            {
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    DataTable dt = new DataTable();
+                    SqlDataReader reader = null;
+
+                    connection.Open();
+
+                    using (SqlCommand command = new SqlCommand(query, connection))
+                    {
+                        // Parametreleri ekleme
+                        command.Parameters.AddWithValue("@day", selectedDay);
+
+
+                        //// Ders Ekleme
+                        reader = command.ExecuteReader();
+                        dt.Load(reader);
+                        dataGridView1.DataSource = dt;
+
+
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Hata oluştu: 352" + ex.Message);
+            }
+
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            ExportToPdf(dataGridView1, "DataGridViewToPdf.pdf");
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            ExportToExcel(dataGridView1);
         }
     } }
   

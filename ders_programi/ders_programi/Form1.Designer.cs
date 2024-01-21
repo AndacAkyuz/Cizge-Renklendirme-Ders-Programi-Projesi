@@ -57,16 +57,6 @@
             this.button7 = new System.Windows.Forms.Button();
             this.derspDataSet1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.günDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bassaatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bitsaatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.seviyeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.derskoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dersadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ogradisoyadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sinif_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sinifkapasiteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sinifturuDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.derspDataSet2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataTable1TableAdapter = new ders_programi.ders_pDataSet1TableAdapters.DataTable1TableAdapter();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -93,6 +83,25 @@
             this.dersBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ders_pDers2 = new ders_programi.ders_pDers2();
             this.dersTableAdapter1 = new ders_programi.ders_pDers2TableAdapters.dersTableAdapter();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.button8 = new System.Windows.Forms.Button();
+            this.comboBox10 = new System.Windows.Forms.ComboBox();
+            this.button9 = new System.Windows.Forms.Button();
+            this.günDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bassaatDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bitsaatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.seviyeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.derskoduDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dersadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ogradisoyadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sinif_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.comboBox11 = new System.Windows.Forms.ComboBox();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button12 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataTable1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.derspDataSet1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ders_pDataSet1)).BeginInit();
@@ -122,7 +131,7 @@
             "Çarşamba",
             "Perşembe",
             "Cuma"});
-            this.comboBox1.Location = new System.Drawing.Point(1107, 225);
+            this.comboBox1.Location = new System.Drawing.Point(1307, 236);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(180, 24);
@@ -149,7 +158,7 @@
             this.comboBox2.DataSource = this.ogretmenBindingSource;
             this.comboBox2.DisplayMember = "ogr_adi_soyadi";
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1100, 149);
+            this.comboBox2.Location = new System.Drawing.Point(1300, 160);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(564, 24);
@@ -177,7 +186,7 @@
             "14.00",
             "15.00",
             "16.00"});
-            this.comboBox3.Location = new System.Drawing.Point(1303, 225);
+            this.comboBox3.Location = new System.Drawing.Point(1503, 236);
             this.comboBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(89, 24);
@@ -202,7 +211,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(1097, 72);
+            this.label1.Location = new System.Drawing.Point(1297, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 4;
@@ -211,7 +220,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(1100, 131);
+            this.label2.Location = new System.Drawing.Point(1300, 142);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(69, 16);
             this.label2.TabIndex = 5;
@@ -220,7 +229,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(1103, 207);
+            this.label3.Location = new System.Drawing.Point(1303, 218);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(34, 16);
             this.label3.TabIndex = 6;
@@ -229,7 +238,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(1299, 207);
+            this.label4.Location = new System.Drawing.Point(1499, 218);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(38, 16);
             this.label4.TabIndex = 7;
@@ -255,7 +264,7 @@
             "16.00",
             "16.50",
             "17.00"});
-            this.comboBox5.Location = new System.Drawing.Point(1418, 225);
+            this.comboBox5.Location = new System.Drawing.Point(1618, 236);
             this.comboBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(95, 24);
@@ -265,7 +274,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1399, 229);
+            this.label5.Location = new System.Drawing.Point(1599, 240);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(11, 16);
             this.label5.TabIndex = 9;
@@ -276,7 +285,7 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button1.Enabled = false;
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(1294, 532);
+            this.button1.Location = new System.Drawing.Point(1494, 543);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(196, 78);
@@ -299,7 +308,7 @@
             // 
             this.button2.BackColor = System.Drawing.SystemColors.Highlight;
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F);
-            this.button2.Location = new System.Drawing.Point(1092, 532);
+            this.button2.Location = new System.Drawing.Point(1292, 543);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(196, 78);
@@ -360,7 +369,7 @@
             // 
             this.button7.BackColor = System.Drawing.SystemColors.Highlight;
             this.button7.Font = new System.Drawing.Font("Microsoft YaHei", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(1495, 531);
+            this.button7.Location = new System.Drawing.Point(1695, 542);
             this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(196, 78);
@@ -386,9 +395,7 @@
             this.derskoduDataGridViewTextBoxColumn,
             this.dersadiDataGridViewTextBoxColumn,
             this.ogradisoyadiDataGridViewTextBoxColumn,
-            this.sinif_id,
-            this.sinifkapasiteDataGridViewTextBoxColumn,
-            this.sinifturuDataGridViewTextBoxColumn});
+            this.sinif_id});
             this.dataGridView1.DataSource = this.dataTable1BindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 118);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -398,86 +405,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(1057, 492);
             this.dataGridView1.TabIndex = 27;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // günDataGridViewTextBoxColumn
-            // 
-            this.günDataGridViewTextBoxColumn.DataPropertyName = "gün";
-            this.günDataGridViewTextBoxColumn.HeaderText = "gün";
-            this.günDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.günDataGridViewTextBoxColumn.Name = "günDataGridViewTextBoxColumn";
-            this.günDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // bassaatDataGridViewTextBoxColumn
-            // 
-            this.bassaatDataGridViewTextBoxColumn.DataPropertyName = "bas_saat";
-            this.bassaatDataGridViewTextBoxColumn.HeaderText = "başlangıç";
-            this.bassaatDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bassaatDataGridViewTextBoxColumn.Name = "bassaatDataGridViewTextBoxColumn";
-            this.bassaatDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // bitsaatiDataGridViewTextBoxColumn
-            // 
-            this.bitsaatiDataGridViewTextBoxColumn.DataPropertyName = "bit_saati";
-            this.bitsaatiDataGridViewTextBoxColumn.HeaderText = "bitiş";
-            this.bitsaatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.bitsaatiDataGridViewTextBoxColumn.Name = "bitsaatiDataGridViewTextBoxColumn";
-            this.bitsaatiDataGridViewTextBoxColumn.Width = 70;
-            // 
-            // seviyeDataGridViewTextBoxColumn
-            // 
-            this.seviyeDataGridViewTextBoxColumn.DataPropertyName = "seviye";
-            this.seviyeDataGridViewTextBoxColumn.HeaderText = "seviye";
-            this.seviyeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.seviyeDataGridViewTextBoxColumn.Name = "seviyeDataGridViewTextBoxColumn";
-            this.seviyeDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // derskoduDataGridViewTextBoxColumn
-            // 
-            this.derskoduDataGridViewTextBoxColumn.DataPropertyName = "ders_kodu";
-            this.derskoduDataGridViewTextBoxColumn.HeaderText = "kod";
-            this.derskoduDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.derskoduDataGridViewTextBoxColumn.Name = "derskoduDataGridViewTextBoxColumn";
-            this.derskoduDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // dersadiDataGridViewTextBoxColumn
-            // 
-            this.dersadiDataGridViewTextBoxColumn.DataPropertyName = "ders_adi";
-            this.dersadiDataGridViewTextBoxColumn.HeaderText = "ders";
-            this.dersadiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.dersadiDataGridViewTextBoxColumn.Name = "dersadiDataGridViewTextBoxColumn";
-            this.dersadiDataGridViewTextBoxColumn.Width = 150;
-            // 
-            // ogradisoyadiDataGridViewTextBoxColumn
-            // 
-            this.ogradisoyadiDataGridViewTextBoxColumn.DataPropertyName = "ogr_adi_soyadi";
-            this.ogradisoyadiDataGridViewTextBoxColumn.HeaderText = "ad soyad";
-            this.ogradisoyadiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ogradisoyadiDataGridViewTextBoxColumn.Name = "ogradisoyadiDataGridViewTextBoxColumn";
-            this.ogradisoyadiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sinif_id
-            // 
-            this.sinif_id.DataPropertyName = "sinif_id";
-            this.sinif_id.HeaderText = "sınıf adı";
-            this.sinif_id.MinimumWidth = 6;
-            this.sinif_id.Name = "sinif_id";
-            this.sinif_id.Width = 60;
-            // 
-            // sinifkapasiteDataGridViewTextBoxColumn
-            // 
-            this.sinifkapasiteDataGridViewTextBoxColumn.DataPropertyName = "sinif_kapasite";
-            this.sinifkapasiteDataGridViewTextBoxColumn.HeaderText = "kapasite";
-            this.sinifkapasiteDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sinifkapasiteDataGridViewTextBoxColumn.Name = "sinifkapasiteDataGridViewTextBoxColumn";
-            this.sinifkapasiteDataGridViewTextBoxColumn.Width = 60;
-            // 
-            // sinifturuDataGridViewTextBoxColumn
-            // 
-            this.sinifturuDataGridViewTextBoxColumn.DataPropertyName = "sinif_turu";
-            this.sinifturuDataGridViewTextBoxColumn.HeaderText = "tür";
-            this.sinifturuDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sinifturuDataGridViewTextBoxColumn.Name = "sinifturuDataGridViewTextBoxColumn";
-            this.sinifturuDataGridViewTextBoxColumn.Width = 125;
             // 
             // dataTable1TableAdapter
             // 
@@ -495,7 +422,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(14, 48);
+            this.textBox2.Location = new System.Drawing.Point(14, 43);
             this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(81, 22);
@@ -589,7 +516,7 @@
             "1040",
             "1041",
             "1044"});
-            this.comboBox8.Location = new System.Drawing.Point(1524, 225);
+            this.comboBox8.Location = new System.Drawing.Point(1724, 236);
             this.comboBox8.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(160, 24);
@@ -609,7 +536,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(1520, 206);
+            this.label11.Location = new System.Drawing.Point(1720, 217);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(35, 16);
@@ -627,7 +554,7 @@
             this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.comboBox6);
-            this.groupBox1.Location = new System.Drawing.Point(1092, 282);
+            this.groupBox1.Location = new System.Drawing.Point(1292, 293);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
@@ -648,7 +575,7 @@
             this.groupBox2.Controls.Add(this.textBox4);
             this.groupBox2.Controls.Add(this.label9);
             this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Location = new System.Drawing.Point(1388, 282);
+            this.groupBox2.Location = new System.Drawing.Point(1588, 293);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
@@ -680,7 +607,7 @@
             this.comboBox4.DataSource = this.dersBindingSource1;
             this.comboBox4.DisplayMember = "ders_adi";
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(1100, 93);
+            this.comboBox4.Location = new System.Drawing.Point(1300, 104);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(561, 24);
             this.comboBox4.TabIndex = 45;
@@ -701,12 +628,213 @@
             // 
             this.dersTableAdapter1.ClearBeforeFill = true;
             // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Items.AddRange(new object[] {
+            "1.Sınıf",
+            "2.Sınıf",
+            "3.Sınıf",
+            "4.Sınıf"});
+            this.comboBox9.Location = new System.Drawing.Point(1075, 179);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(137, 24);
+            this.comboBox9.TabIndex = 46;
+            this.comboBox9.Text = "1.Sınıf";
+            // 
+            // button8
+            // 
+            this.button8.Location = new System.Drawing.Point(1218, 180);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(63, 23);
+            this.button8.TabIndex = 47;
+            this.button8.Text = "Sırala";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
+            // 
+            // comboBox10
+            // 
+            this.comboBox10.FormattingEnabled = true;
+            this.comboBox10.Items.AddRange(new object[] {
+            "23",
+            "25",
+            "1036",
+            "1040",
+            "1041",
+            "1044"});
+            this.comboBox10.Location = new System.Drawing.Point(1075, 232);
+            this.comboBox10.Name = "comboBox10";
+            this.comboBox10.Size = new System.Drawing.Size(137, 24);
+            this.comboBox10.TabIndex = 48;
+            this.comboBox10.Text = "1040";
+            // 
+            // button9
+            // 
+            this.button9.Location = new System.Drawing.Point(1218, 232);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(63, 23);
+            this.button9.TabIndex = 49;
+            this.button9.Text = "Sırala";
+            this.button9.UseVisualStyleBackColor = true;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
+            // 
+            // günDataGridViewTextBoxColumn
+            // 
+            this.günDataGridViewTextBoxColumn.DataPropertyName = "gün";
+            this.günDataGridViewTextBoxColumn.HeaderText = "gün";
+            this.günDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.günDataGridViewTextBoxColumn.Name = "günDataGridViewTextBoxColumn";
+            this.günDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // bassaatDataGridViewTextBoxColumn
+            // 
+            this.bassaatDataGridViewTextBoxColumn.DataPropertyName = "bas_saat";
+            this.bassaatDataGridViewTextBoxColumn.HeaderText = "başlangıç";
+            this.bassaatDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bassaatDataGridViewTextBoxColumn.Name = "bassaatDataGridViewTextBoxColumn";
+            this.bassaatDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // bitsaatiDataGridViewTextBoxColumn
+            // 
+            this.bitsaatiDataGridViewTextBoxColumn.DataPropertyName = "bit_saati";
+            this.bitsaatiDataGridViewTextBoxColumn.HeaderText = "bitiş";
+            this.bitsaatiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.bitsaatiDataGridViewTextBoxColumn.Name = "bitsaatiDataGridViewTextBoxColumn";
+            this.bitsaatiDataGridViewTextBoxColumn.Width = 70;
+            // 
+            // seviyeDataGridViewTextBoxColumn
+            // 
+            this.seviyeDataGridViewTextBoxColumn.DataPropertyName = "seviye";
+            this.seviyeDataGridViewTextBoxColumn.HeaderText = "seviye";
+            this.seviyeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.seviyeDataGridViewTextBoxColumn.Name = "seviyeDataGridViewTextBoxColumn";
+            this.seviyeDataGridViewTextBoxColumn.Width = 60;
+            // 
+            // derskoduDataGridViewTextBoxColumn
+            // 
+            this.derskoduDataGridViewTextBoxColumn.DataPropertyName = "ders_kodu";
+            this.derskoduDataGridViewTextBoxColumn.HeaderText = "kod";
+            this.derskoduDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.derskoduDataGridViewTextBoxColumn.Name = "derskoduDataGridViewTextBoxColumn";
+            this.derskoduDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // dersadiDataGridViewTextBoxColumn
+            // 
+            this.dersadiDataGridViewTextBoxColumn.DataPropertyName = "ders_adi";
+            this.dersadiDataGridViewTextBoxColumn.HeaderText = "ders";
+            this.dersadiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.dersadiDataGridViewTextBoxColumn.Name = "dersadiDataGridViewTextBoxColumn";
+            this.dersadiDataGridViewTextBoxColumn.Width = 150;
+            // 
+            // ogradisoyadiDataGridViewTextBoxColumn
+            // 
+            this.ogradisoyadiDataGridViewTextBoxColumn.DataPropertyName = "ogr_adi_soyadi";
+            this.ogradisoyadiDataGridViewTextBoxColumn.HeaderText = "ad soyad";
+            this.ogradisoyadiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ogradisoyadiDataGridViewTextBoxColumn.Name = "ogradisoyadiDataGridViewTextBoxColumn";
+            this.ogradisoyadiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // sinif_id
+            // 
+            this.sinif_id.DataPropertyName = "sinif_id";
+            this.sinif_id.HeaderText = "sınıf adı";
+            this.sinif_id.MinimumWidth = 6;
+            this.sinif_id.Name = "sinif_id";
+            this.sinif_id.Width = 60;
+            // 
+            // comboBox11
+            // 
+            this.comboBox11.FormattingEnabled = true;
+            this.comboBox11.Items.AddRange(new object[] {
+            "Pazartesi",
+            "Salı",
+            "Çarşamba",
+            "Perşembe",
+            "Cuma"});
+            this.comboBox11.Location = new System.Drawing.Point(1075, 118);
+            this.comboBox11.Name = "comboBox11";
+            this.comboBox11.Size = new System.Drawing.Size(137, 24);
+            this.comboBox11.TabIndex = 50;
+            this.comboBox11.Text = "Pazartesi";
+            // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(1218, 119);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(63, 23);
+            this.button10.TabIndex = 51;
+            this.button10.Text = "Sırala";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button11.ForeColor = System.Drawing.Color.Red;
+            this.button11.Location = new System.Drawing.Point(1071, 293);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(184, 85);
+            this.button11.TabIndex = 52;
+            this.button11.Text = "PDF Olarak İndir";
+            this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.SystemColors.GrayText;
+            this.button12.ForeColor = System.Drawing.Color.Lime;
+            this.button12.Location = new System.Drawing.Point(1075, 433);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(183, 88);
+            this.button12.TabIndex = 53;
+            this.button12.Text = "Excel Olarak İndir";
+            this.button12.UseVisualStyleBackColor = false;
+            this.button12.Click += new System.EventHandler(this.button12_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(1075, 96);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(114, 16);
+            this.label10.TabIndex = 54;
+            this.label10.Text = "Güne Göre Listele";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(1075, 157);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(180, 16);
+            this.label12.TabIndex = 55;
+            this.label12.Text = "Sınıf Derecesine Göre Listele";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(1075, 213);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(115, 16);
+            this.label13.TabIndex = 56;
+            this.label13.Text = "Sınıfa Göre Listele";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.GrayText;
-            this.ClientSize = new System.Drawing.Size(1701, 621);
+            this.ClientSize = new System.Drawing.Size(1909, 621);
+            this.Controls.Add(this.label13);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button12);
+            this.Controls.Add(this.button11);
+            this.Controls.Add(this.button10);
+            this.Controls.Add(this.comboBox11);
+            this.Controls.Add(this.button9);
+            this.Controls.Add(this.comboBox10);
+            this.Controls.Add(this.button8);
+            this.Controls.Add(this.comboBox9);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox2);
@@ -812,6 +940,10 @@
         private ders_pDers2 ders_pDers2;
         private System.Windows.Forms.BindingSource dersBindingSource1;
         private ders_pDers2TableAdapters.dersTableAdapter dersTableAdapter1;
+        private System.Windows.Forms.ComboBox comboBox9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.ComboBox comboBox10;
+        private System.Windows.Forms.Button button9;
         private System.Windows.Forms.DataGridViewTextBoxColumn günDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bassaatDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bitsaatiDataGridViewTextBoxColumn;
@@ -820,8 +952,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dersadiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ogradisoyadiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn sinif_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sinifkapasiteDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sinifturuDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox comboBox11;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
     }
 }
 
